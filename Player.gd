@@ -24,4 +24,4 @@ func movement_process(delta: float):
   else:
     velocity = velocity.move_toward(Vector2.ZERO, friction)
 
-  move_and_collide(velocity * delta)
+  velocity = move_and_slide(velocity)
