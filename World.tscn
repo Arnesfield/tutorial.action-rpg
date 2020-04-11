@@ -1,23 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://assets/Player/Player.png" type="Texture" id=1]
-[ext_resource path="res://Player.gd" type="Script" id=2]
-
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 3.5014
-height = 3.25399
+[ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
 
 [node name="World" type="Node2D"]
 
-[node name="Player" type="KinematicBody2D" parent="."]
-position = Vector2( 22.6382, 21.5191 )
-script = ExtResource( 2 )
-
-[node name="Sprite" type="Sprite" parent="Player"]
-texture = ExtResource( 1 )
-hframes = 60
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2( -1, 8 )
-rotation = 1.5708
-shape = SubResource( 1 )
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 44.1545, 28.2696 )
