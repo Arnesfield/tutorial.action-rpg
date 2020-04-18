@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://world/bush/Bush.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/World/GrassBackground.png" type="Texture" id=3]
+[ext_resource path="res://world/dirt/DirtTileset.tres" type="TileSet" id=4]
 
 [node name="World" type="Node2D"]
 
@@ -11,23 +12,35 @@ position = Vector2( 160, 90 )
 texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 320, 180 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -65530, 0, 0, -65529, 0, 2, -65524, 0, 3, -65520, 0, 0, -65519, 0, 2, 6, 0, 65536, 7, 0, 65538, 12, 0, 131075, 16, 0, 131072, 17, 0, 131074, 65537, 0, 3, 65542, 0, 65536, 65543, 0, 65538, 65547, 0, 196611, 131073, 0, 196612, 131074, 0, 7, 131078, 0, 65536, 131079, 0, 65538, 131091, 0, 0, 131092, 0, 2, 196610, 0, 131075, 196614, 0, 65536, 196615, 0, 65538, 196626, 0, 4, 196627, 0, 196614, 196628, 0, 131074, 262149, 0, 196608, 262150, 0, 262150, 262151, 0, 131077, 262152, 0, 1, 262153, 0, 1, 262154, 0, 1, 262155, 0, 1, 262156, 0, 1, 262157, 0, 2, 262162, 0, 131075, 327686, 0, 131072, 327687, 0, 65544, 327688, 0, 131073, 327689, 0, 131073, 327690, 0, 131073, 327691, 0, 131073, 327692, 0, 131073, 327693, 0, 9, 327694, 0, 2, 458751, 0, 0, 393216, 0, 1, 393217, 0, 1, 393218, 0, 2, 393223, 0, 131075, 393229, 0, 65536, 393230, 0, 131077, 393231, 0, 2, 524287, 0, 131072, 458752, 0, 131073, 458753, 0, 131073, 458754, 0, 9, 458755, 0, 2, 458764, 0, 4, 458765, 0, 196614, 458766, 0, 131073, 458767, 0, 9, 458768, 0, 2, 524290, 0, 131072, 524291, 0, 9, 524292, 0, 2, 524299, 0, 4, 524300, 0, 196615, 524303, 0, 131072, 524304, 0, 9, 524305, 0, 1, 524306, 0, 1, 524307, 0, 1, 524308, 0, 2, 589827, 0, 65536, 589828, 0, 65538, 589835, 0, 131075, 589840, 0, 131072, 589841, 0, 131073, 589842, 0, 131073, 589843, 0, 131073, 589844, 0, 131074, 655363, 0, 131072, 655364, 0, 9, 655365, 0, 5, 655366, 0, 196610, 786431, 0, 196608, 720896, 0, 196610, 720900, 0, 131072, 720901, 0, 131074, 720909, 0, 196611 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 40, 32 )
+position = Vector2( 160, 80 )
 
 [node name="Bush" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 40, 96 )
 
 [node name="Bush2" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 104, 64 )
+position = Vector2( 88, 56 )
 
 [node name="Bush3" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 152, 128 )
 
 [node name="Bush4" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 264, 88 )
+position = Vector2( 280, 128 )
 
 [node name="Bush5" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 208, 48 )
+position = Vector2( 240, 64 )
